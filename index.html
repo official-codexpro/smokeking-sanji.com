@@ -1,0 +1,1185 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smokeking Store – Vintage Lighters</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWixYJQ0U9E9Q4KkC4R9E+o5DkFz0xRykG5qBP3ZiZsa1+l9I7IuP89xDSHLyfXRIlnJrA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+body{
+background: linear-gradient(
+  140deg,
+  #0b0b0b 0%,
+  #1a0000 40%,
+  #d4af37 70%,
+  #0b0b0b 100%
+);
+
+    );
+
+  color:#e8e0d6;
+}
+
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .brand-font {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee {
+      animation: marquee 40s linear infinite;
+    }
+
+    #marqueeWrapper {
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    #marqueeWrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    #marqueeTrack {
+      width: max-content;
+    }
+
+    /* ================= HAMBURGER ================= */
+
+    .hamburger {
+      width: 28px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hamburger span {
+      width: 100%;
+      height: 2px;
+      background: #E6DED4;
+      transition: transform .4s ease, opacity .3s ease;
+      transform-origin: center;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* HARD FIX: desktop pe hide enforce */
+    @media (min-width:1024px){
+      .hamburger{
+        display:none !important;
+      }
+      #mobileMenu{
+        display:none !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+<!-- ================= PREMIUM TOPBAR SECTION : START{AAK} ================= -->
+<section class="bg-[#c70000] border-y border-[#ffffff] overflow-hidden">
+  <div class="relative flex whitespace-nowrap">
+    <div class="flex animate-marquee gap-10 py-3 text-[11px] sm:text-xs tracking-[0.35em] uppercase text-[#ffffff]">
+
+      <span><b>✂️ Precision Meets Luxury - Masterfully Crafted Cutters</b></span>
+      <span><b>✨ Premium Smoking Accessories - Where Quality Meets Craftsmanship</b></span>
+      <span><b>🔥 Ignite Your Style - Premium Lighters for the Distinguished</b></span>
+      <span><b>✂️ Precision Meets Luxury - Masterfully Crafted Cutters</b></span>
+
+      <span><b>✂️ Precision Meets Luxury - Masterfully Crafted Cutters</b></span>
+      <span><b>✨ Premium Smoking Accessories - Where Quality Meets Craftsmanship</b></span>
+      <span><b>🔥 Ignite Your Style - Premium Lighters for the Distinguished</b></span>
+      <span><b>✂️ Precision Meets Luxury - Masterfully Crafted Cutters</b></span>
+
+    </div>
+  </div>
+</section></b>
+<!-- ================= NAVBAR SECTION : START{AAK} ================= -->
+<nav class="sticky top-0 z-50 bg-[#000000]/95 backdrop-blur-md border-b border-[#2A241E]" style=" font-family: 'Libre Baskerville', serif;">
+
+  <!-- NAV ROW -->
+  <div class="max-w-7xl mx-auto px-6 h-[64px] flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="/" class="flex items-center gap-3">
+      <img src="https://www.smokeking.in/static/logo.gif" alt="SmokeKing.inlogo" class="h-12 w-auto"/>
+      <span class="text-xl lg:text-2xl font-bold text-white brandbe-font">
+         SmokeKing.in<span class="text-[#C0A27A]"></span>
+      </span>
+    </a>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden lg:flex items-center gap-10 text-[13.5px] font-medium text-[#CFC6BB]">
+
+   <!-- ================= CATEGORIES DROPDOWN ================= -->
+<div class="relative group">
+
+  <!-- Button -->
+  <button class="flex items-center gap-1 hover:text-[#C0A27A] transition">
+    Categories
+    <span class="text-xs transition-transform group-hover:rotate-180">⌄</span>
+  </button>
+
+  <!-- Dropdown -->
+  <div class="absolute left-0 top-full mt-3 w-[260px]
+              bg-black/80 border border-white rounded-xl
+              shadow-[0_20px_60px_rgba(0,0,0,0.65)]
+              opacity-0 invisible translate-y-2
+              group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
+              transition-all duration-300">
+
+    
+
+    <a href="/products/?category=premium_lighters"
+       class="flex gap-4 px-5 py-4
+              rounded-t-xl
+              
+              hover:bg-[#1C1A17] group transition duration-300">
+
+      <!-- ICON -->
+      <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+
+        
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#C0A27A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="transition: transform 0.3s ease;" class="group-hover-icon">
+                <path
+                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+                </path>
+              </svg>
+
+        
+
+      </span>
+
+      <!-- TEXT (ALL SAME STYLE) -->
+      <div>
+        <p class="text-[#E6DED4] text-sm font-medium">
+          Lighters
+        </p>
+        <p class="text-xs text-[#9C9185]">
+          Premium collection
+        </p>
+      </div>
+
+    </a>
+
+    
+      <div class="mx-5 h-px bg-[#C0A27A]/20"></div>
+    
+
+    
+
+    <a href="/products/?category=premium_cutters"
+       class="flex gap-4 px-5 py-4
+              
+              
+              hover:bg-[#1C1A17] group transition duration-300">
+
+      <!-- ICON -->
+      <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+
+        
+                        <i data-feather="scissors" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
+
+
+        
+
+      </span>
+
+      <!-- TEXT (ALL SAME STYLE) -->
+      <div>
+        <p class="text-[#E6DED4] text-sm font-medium">
+          Cutter
+        </p>
+        <p class="text-xs text-[#9C9185]">
+          Premium collection
+        </p>
+      </div>
+
+    </a>
+
+    
+      <div class="mx-5 h-px bg-[#C0A27A]/20"></div>
+    
+
+    
+
+    <a href="/products/?category=cigarette-case"
+       class="flex gap-4 px-5 py-4
+              
+              
+              hover:bg-[#1C1A17] group transition duration-300">
+
+      <!-- ICON -->
+      <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+
+        
+                       <i data-feather="briefcase" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
+
+
+        
+
+      </span>
+
+      <!-- TEXT (ALL SAME STYLE) -->
+      <div>
+        <p class="text-[#E6DED4] text-sm font-medium">
+          Cigarette Case
+        </p>
+        <p class="text-xs text-[#9C9185]">
+          Premium collection
+        </p>
+      </div>
+
+    </a>
+
+    
+      <div class="mx-5 h-px bg-[#C0A27A]/20"></div>
+    
+
+    
+
+    <a href="/products/?category=premium_cigarette_ring"
+       class="flex gap-4 px-5 py-4
+              
+              rounded-b-xl
+              hover:bg-[#1C1A17] group transition duration-300">
+
+      <!-- ICON -->
+      <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+
+        
+                 <i data-feather="circle" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
+
+        
+
+      </span>
+
+      <!-- TEXT (ALL SAME STYLE) -->
+      <div>
+        <p class="text-[#E6DED4] text-sm font-medium">
+          Cigarette Ring
+        </p>
+        <p class="text-xs text-[#9C9185]">
+          Premium collection
+        </p>
+      </div>
+
+    </a>
+
+    
+
+    
+
+  </div>
+</div>
+
+<!-- Feather Icons Script (MANDATORY) -->
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
+
+<a href="/products/" 
+   class="hover:text-[#C0A27A] transition">
+  All Products
+</a>
+
+<a href="https://www.smokeking.in/page/vintage-lighters/" 
+   class="hover:text-[#C0A27A] transition">
+  Vintage Lighters
+</a>
+
+<a href="https://www.smokeking.in/page/sanji-lighters/" 
+   class="hover:text-[#C0A27A] transition">
+  Sanji Collection
+</a>
+
+</div>
+<!-- ================= RIGHT SIDE ================= -->
+<div class="hidden lg:flex items-center gap-7 text-[13.5px] text-[#CFC6BB]">
+
+  <!-- Cart -->
+  <a href="https://www.smokeking.in/cart/"
+     class="flex items-center gap-2 hover:text-[#C0A27A] transition group">
+    <i data-feather="shopping-cart"
+       class="w-5 h-5 group-hover:scale-110 transition"></i>
+    Cart
+  </a>
+
+  
+
+  <!-- Logged In User -->
+  <div class="relative">
+
+    <button id="vintageUserBtn"
+            class="flex items-center gap-2 hover:text-[#C0A27A] transition">
+
+      <div class="w-8 h-8 bg-gradient-to-r from-[#8f6b2c] via-[#d4af37] to-[#8f6b2c]
+                  rounded-full flex items-center justify-center">
+        <span class="text-[#181310] font-bold text-sm">
+          A
+        </span>
+      </div>
+
+      <span class="font-medium">aakash</span>
+
+      <i id="userChevron"
+         data-feather="chevron-down"
+         class="w-4 h-4 transition-transform duration-300"></i>
+
+    </button>
+
+    <!-- Dropdown -->
+    <div id="vintageUserMenu"
+         class="hidden absolute right-0 mt-3 w-48
+                bg-[#14100D] border border-[#2A241E]
+                rounded-xl shadow-2xl overflow-hidden z-50">
+
+      <div class="p-2">
+
+        <a href="/accounts/profile/"
+           class="flex items-center gap-3 px-4 py-3
+                  text-[#CFC6BB] hover:bg-[#1C1A17]
+                  rounded-lg transition">
+
+          <i data-feather="user"
+             class="w-5 h-5 text-[#C0A27A]"></i>
+          <span>Profile</span>
+        </a>
+
+        <a href="/accounts/logout/"
+           class="flex items-center gap-3 px-4 py-3
+                  text-red-400 hover:bg-red-900/20
+                  rounded-lg transition">
+
+          <i data-feather="log-out"
+             class="w-5 h-5"></i>
+          <span>Logout</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  
+
+</div>
+
+  <!-- MOBILE TOGGLE -->
+    <button id="mobileMenuBtn" class="lg:hidden hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+
+  <!-- ================= MOBILE MENU (INSIDE NAV) ================= -->
+  <div id="mobileMenu" class="lg:hidden w-full
+              bg-black backdrop-blur-xl
+              border-t border-[#2A241E]
+              overflow-hidden" style="max-height:0px; transition:max-height 0.45s ease;">
+
+    <div class="px-6 py-6 space-y-4 text-[#E6DED4]">
+
+      <!-- ================= CATEGORIES ================= -->
+      <div>
+
+        <!-- Header (Clickable) -->
+        <button id="mobileCategoryBtn" class="w-full flex items-center justify-between py-3 border-b border-[#2A241E]">
+
+          <div class="flex items-center gap-3">
+            <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+              <i data-feather="grid" class="w-4 h-4 text-[#C0A27A]"></i>
+            </span>
+            <span class="text-sm tracking-wide uppercase">Categories</span>
+          </div>
+
+          <i id="mobileCategoryIcon" data-feather="chevron-down"
+            class="w-4 h-4 text-[#C0A27A] transition-transform duration-300"></i>
+
+        </button>
+
+        <!-- Dropdown -->
+        <div id="mobileCategoryDropdown" class="overflow-hidden max-h-0 transition-all duration-500">
+
+          <div class="mt-2 space-y-1">
+
+            <a href="https://www.smokeking.in/products/?category=premium_lighters" class="flex items-center gap-3 py-3 px-2 border-b border-[#2A241E]
+         text-[#CFC6BB] hover:text-[#C0A27A] transition duration-300">
+
+                <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#C0A27A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                style="transition: transform 0.3s ease;" class="group-hover-icon">
+                <path
+                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+                </path>
+              </svg>
+              </span>
+
+              Premium Lighters
+            </a>
+
+            <a href="https://www.smokeking.in/products/?category=premium_cutters" class="flex items-center gap-3 py-3 px-2 border-b border-[#2A241E]
+         text-[#CFC6BB] hover:text-[#C0A27A] transition duration-300">
+
+                <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+                <i data-feather="scissors" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
+              </span>
+
+              Premium Cutters
+            </a>
+
+            <a href="https://www.smokeking.in/products/?category=cigarette-case" class="flex items-center gap-3 py-3 px-2 border-b border-[#2A241E]
+         text-[#CFC6BB] hover:text-[#C0A27A] transition duration-300">
+
+                <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+                <i data-feather="briefcase" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
+              </span>
+
+              Cigarette Case
+            </a>
+
+            <a href="https://www.smokeking.in/products/?category=premium_cigarette_ring" class="flex items-center gap-3 py-3 px-2
+         text-[#CFC6BB] hover:text-[#C0A27A] transition duration-300">
+
+                <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
+                   flex items-center justify-center overflow-hidden">
+                <i data-feather="circle" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
+              </span>
+
+              Cigarette Ring
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= MAIN LINKS ================= -->
+
+      <a href="/products/" class="flex items-center gap-3 py-3 border-b border-[#2A241E]
+       hover:text-[#C0A27A] transition duration-300">
+        <i data-feather="box" class="w-4 h-4"></i>
+        All Products
+      </a>
+
+      <a href="https://www.smokeking.in/page/vintage-lighters/" class="flex items-center gap-3 py-3 border-b border-[#2A241E]
+       hover:text-[#C0A27A] transition duration-300">
+        <i data-feather="star" class="w-4 h-4"></i>
+        Vintage Lighters
+      </a>
+
+      <a href="https://www.smokeking.in/page/sanji-lighters/" class="flex items-center gap-3 py-3 border-b border-[#2A241E]
+       hover:text-[#C0A27A] transition duration-300">
+        <i data-feather="award" class="w-4 h-4"></i>
+        Sanji Collection
+      </a>
+
+      <!-- ================= ACTION BUTTONS ================= -->
+
+      <div class="pt-4 space-y-3">
+
+        <a href="https://www.smokeking.in/cart/" class="flex items-center justify-center gap-2 py-3 rounded-lg
+         bg-[#1C1A17] border border-[#2A241E]
+         hover:text-[#C0A27A] transition duration-300">
+          <i data-feather="shopping-cart" class="w-4 h-4"></i>
+          View Cart
+        </a>
+
+        
+        <!-- Logged in user section -->
+        <div class="flex items-center gap-3 p-3 bg-[#1C1A17] border border-[#2A241E] rounded-lg">
+          <div class="w-10 h-10 bg-gradient-to-r from-[#8f6b2c] via-[#d4af37] to-[#8f6b2c] rounded-full flex items-center justify-center">
+            <span class="text-[#181310] font-bold">A</span>
+          </div>
+          <div>
+            <div class="font-semibold text-[#E6DED4]">aakash</div>
+            <div class="text-xs text-[#9C9185]">aakash@quikprof.in</div>
+          </div>
+        </div>
+        <a href="/accounts/profile/" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-[#1C1A17] border border-[#2A241E] hover:text-[#C0A27A] transition duration-300">
+          <i data-feather="user" class="w-4 h-4"></i>
+          Profile
+        </a>
+        <a href="/accounts/logout/" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-red-900/30 border border-red-800/50 text-red-400 hover:bg-red-900/50 transition duration-300">
+          <i data-feather="log-out" class="w-4 h-4"></i>
+          Logout
+        </a>
+        
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</nav>
+<!-- ================= NEVBAR END================= -->
+
+
+<!-- HERO SECTION : START -->
+<section class="relative overflow-hidden text-[#f5eaea] border-b-[4px] border-[#d4af37] h-[80vh]">
+
+  <!-- Image Background -->
+  <div class="absolute inset-0">
+    <img src="IMG/herobg1.png" alt="Anime Background"
+         class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/65"></div>
+
+  <!-- Red Cinematic Blend -->
+  <div class="absolute inset-0 
+              bg-gradient-to-br from-[#7a0000]/60 via-transparent to-black/80">
+  </div>
+
+  <!-- Soft Glow Center -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-[700px] h-[700px]
+              bg-[#e10600]/25 blur-[200px] rounded-full">
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-14 lg:pt-16">
+
+    <div class="grid lg:grid-cols-2 gap-6 sm:gap-10 min-h-[70vh]">
+
+      <!-- LEFT CONTENT -->
+<div class="flex items-start pt-10 sm:pt-16 lg:pt-36">
+        <div class="text-center lg:text-left">
+
+          <p class="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-[#ff4d4d] mb-3">
+            Archive Collection
+          </p>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-4
+                     bg-gradient-to-r from-[#ffffff] via-[#ff4d4d] to-[#ffffff] 
+                     bg-clip-text text-transparent">
+            Smokeking Vintage Brass
+          </h1>
+
+          <p class="text-[#d6b3b3] max-w-xl text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+            Forged in aged brass.
+            Marked by time. Built with mechanical soul.
+            A piece to outlive generations.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+
+            <button onclick="window.location.href='https://www.smokeking.in/'"
+              class="px-10 py-3 text-xs tracking-[0.35em] uppercase 
+                     bg-[#e10600] text-white 
+                     hover:bg-[#c40000]
+                     shadow-[0_0_50px_rgba(225,6,0,0.6)]
+                     transition duration-300">
+              VIEW Collection
+            </button>
+
+            <button onclick="window.location.href='https://www.smokeking.in/coupons/'"
+              class="px-10 py-3 text-xs tracking-[0.35em] uppercase 
+                     border border-[#ff4d4d] text-[#ff4d4d] 
+                     hover:bg-[#1f0000] 
+                     transition duration-300">
+              GET COUPON
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+     <!-- RIGHT IMAGE -->
+      <div class="relative flex items-end justify-center lg:justify-end">
+
+        <!-- Glow -->
+        <div class="absolute w-[320px] h-[320px] sm:w-[480px] sm:h-[480px] lg:w-[700px] lg:h-[700px]
+                  bg-[#C0A27A]/18 blur-[170px] sm:blur-[210px] lg:blur-[240px] rounded-full">
+        </div>
+
+        <!-- Image -->
+        <img src="IMG/character.png" alt="Vintage Lighter" class="relative 
+                    w-[280px] sm:w-[380px] md:w-[520px] lg:w-[680px]
+                    drop-shadow-[0_40px_70px_rgba(0,0,0,0.85)]
+                    hover:scale-[1.015] transition duration-700" />
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- HERO SECTION : END -->
+
+<!-- LARGE 4 CARD SECTION: START{AAK}-->
+<section class="bg-[radial-gradient(circle_at_top,#140000,transparent_70%)] bg-[#0b0b0b] mt-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-[1px] bg-[#d4af37]/30">
+
+    <!-- CARD 1 -->
+    <a href="https://www.smokeking.in/products/Hollow_Ring_Lighter/"
+      class="relative bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)] flex items-center justify-center overflow-hidden group">
+
+      <div class="absolute top-4 sm:top-5 left-4 sm:left-5 z-10">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Hollow Ring Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60"></div>
+
+      <img src="https://smokeking.in//gallery/IMG/3.png" class="relative h-[200px] sm:h-[260px] lg:h-[350px] 
+                      object-contain p-5 sm:p-6 lg:p-8 
+                      transition duration-700 group-hover:scale-[1.02]" />
+    </a>
+
+
+    <!-- CARD 2 -->
+    <a href="https://www.smokeking.in/products/Gold_Transparent_Ring_Lighter/" class="group relative aspect-[16/9]
+                bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+                overflow-hidden flex items-center justify-center">
+
+      <div class="absolute top-3 left-3 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Transparent Gold Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60 z-10"></div>
+
+      <img src="https://smokeking.in//gallery/IMG/18.png"
+        class="relative z-20 h-full object-contain p-3 transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+    <!-- CARD 3 -->
+    <a href="https://www.smokeking.in/products/Wukong_Gold_Lighter/" class="group relative aspect-[16/9]
+                bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+                overflow-hidden flex items-center justify-center">
+
+      <div class="absolute top-3 left-3 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Wukong Gold Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60 z-10"></div>
+
+      <img src="https://smokeking.in//gallery/IMG/12.png"
+        class="relative z-20 h-full object-contain p-3 transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+    <!-- CARD 4 -->
+    <a href="https://www.smokeking.in/products/Submarine_style_lighter/" class="group relative aspect-[16/9]
+                bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+                overflow-hidden flex items-center justify-center">
+
+      <div class="absolute top-3 left-3 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Submarine Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60 z-10"></div>
+
+      <img src="https://smokeking.in//gallery/IMG/2.png"
+        class="relative z-20 h-full object-contain p-3 transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+  </div>
+</section>
+<!-- LARGE 4 CARD  SECTION: END{AAK}-->
+
+<!-- BEST SELLER BAR SECTION : START -->
+<div class="bg-[#0b0b0b] mt-1 mb-1">
+
+  <!-- Soft Red Aura Background -->
+  <div class="absolute left-1/2 -translate-x-1/2 w-[600px] h-[200px]
+              bg-[#8b0000]/20 blur-[120px] rounded-full pointer-events-none">
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 py-5">
+    <div class="flex items-center gap-6">
+
+      <!-- Left Line -->
+      <span class="flex-1 h-[1px] 
+                   bg-gradient-to-r 
+                   from-transparent 
+                   via-[#d4af37]/70 
+                   to-transparent">
+      </span>
+
+      <!-- Text -->
+      <h3 class="text-xs sm:text-sm tracking-[0.4em] uppercase 
+                 text-[#d4af37] font-semibold">
+        Best Sellers
+      </h3>
+
+      <!-- Right Line -->
+      <span class="flex-1 h-[1px] 
+                   bg-gradient-to-r 
+                   from-transparent 
+                   via-[#d4af37]/70 
+                   to-transparent">
+      </span>
+
+    </div>
+  </div>
+</div>
+<!-- BEST SELLER BAR SECTION : END -->
+
+<!-- RIGHT TO LEFT SLIDER SECTION : START{AAK}-->
+<section class="relative bg-[#0b0b0b] mt-1 overflow-hidden">
+
+  <!-- Red Cinematic Aura -->
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px]
+              bg-[#8b0000]/25 blur-[220px] rounded-full">
+  </div>
+
+  <!-- Gold Soft Glow -->
+  <div class="absolute -bottom-40 right-[-200px] w-[600px] h-[600px]
+              bg-[#d4af37]/10 blur-[180px] rounded-full">
+  </div>
+
+  <div class="relative w-full overflow-hidden">
+    <div id="marqueeWrapper" class="w-full overflow-hidden">
+      <div id="marqueeTrack" class="flex gap-[2px] will-change-transform">
+
+        <!-- SLIDE TEMPLATE STYLE -->
+        <!-- Background upgraded -->
+        <!-- Hover red glow added -->
+        <!-- Gold heading refined -->
+
+        <!-- SLIDE 1 -->
+        <a href="https://www.smokeking.in/products/Wukong_Gold_Lighter/"
+          class="group relative min-w-[75vw] sm:min-w-[55vw] lg:min-w-[30vw]
+                 h-[260px] sm:h-[320px] lg:h-[380px]
+                 flex items-center justify-center overflow-hidden
+                 bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]">
+
+          <div class="absolute top-4 left-4 z-20">
+            <h4 class="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-[#d4af37]">
+              Wukong Gold Lighter
+            </h4>
+          </div>
+
+          <div class="absolute inset-0 bg-[#8b0000]/0 group-hover:bg-[#8b0000]/25 transition duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+
+          <img src="https://smokeking.in/gallery/IMG/12.png"
+            class="relative z-20 h-full object-contain p-6 transition duration-700 group-hover:scale-[1.06]" />
+        </a>
+
+        <!-- SLIDE 2 -->
+        <a href="https://www.smokeking.in/products/Gold_Mechanical_Lighter/"
+          class="group relative min-w-[75vw] sm:min-w-[55vw] lg:min-w-[30vw]
+                 h-[260px] sm:h-[320px] lg:h-[380px]
+                 flex items-center justify-center overflow-hidden
+                 bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]">
+
+          <div class="absolute top-4 left-4 z-20">
+            <h4 class="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-[#d4af37]">
+              Gold Mechanical Lighter
+            </h4>
+          </div>
+
+          <div class="absolute inset-0 bg-[#8b0000]/0 group-hover:bg-[#8b0000]/25 transition duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+
+          <img src="https://smokeking.in/gallery/IMG/13.png"
+            class="relative z-20 h-full object-contain p-6 transition duration-700 group-hover:scale-[1.06]" />
+        </a>
+
+        <!-- SLIDE 3 -->
+        <a href="https://www.smokeking.in/products/Gold_Pipe_Wheel_Lighter/"
+          class="group relative min-w-[75vw] sm:min-w-[55vw] lg:min-w-[30vw]
+                 h-[260px] sm:h-[320px] lg:h-[380px]
+                 flex items-center justify-center overflow-hidden
+                 bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]">
+
+          <div class="absolute top-4 left-4 z-20">
+            <h4 class="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-[#d4af37]">
+              Gold Stick Pipe
+            </h4>
+          </div>
+
+          <div class="absolute inset-0 bg-[#8b0000]/0 group-hover:bg-[#8b0000]/25 transition duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+
+          <img src="https://smokeking.in/gallery/IMG/6.png"
+            class="relative z-20 h-full object-contain p-6 transition duration-700 group-hover:scale-[1.06]" />
+        </a>
+
+        <!-- SLIDE 4 -->
+        <a href="https://www.smokeking.in/products/Vintage_Gol_Mec_Lighter/"
+          class="group relative min-w-[75vw] sm:min-w-[55vw] lg:min-w-[30vw]
+                 h-[260px] sm:h-[320px] lg:h-[380px]
+                 flex items-center justify-center overflow-hidden
+                 bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]">
+
+          <div class="absolute top-4 left-4 z-20">
+            <h4 class="text-xs sm:text-sm font-semibold tracking-[0.25em] uppercase text-[#d4af37]">
+              Vintage Gold Trench Lighter
+            </h4>
+          </div>
+
+          <div class="absolute inset-0 bg-[#8b0000]/0 group-hover:bg-[#8b0000]/25 transition duration-500"></div>
+          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
+
+          <img src="https://smokeking.in/gallery/IMG/16.png"
+            class="relative z-20 h-full object-contain p-6 transition duration-700 group-hover:scale-[1.06]" />
+        </a>
+
+        <!-- Continue same pattern for remaining slides -->
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- RIGHT TO LEFT SLIDER SECTION : END{AAK}-->
+
+
+<!-- VINTAGE COLLECTION BAR SECTION : START -->
+<div class="relative bg-[#0b0b0b] mt-1 mb-1 overflow-hidden">
+
+  <!-- Soft Red Glow -->
+  <div class="absolute left-1/2 -translate-x-1/2 w-[650px] h-[220px]
+              bg-[#8b0000]/20 blur-[140px] rounded-full pointer-events-none">
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 py-5">
+    <div class="flex items-center gap-6">
+
+      <!-- Left Line -->
+      <span class="flex-1 h-[1px] 
+                   bg-gradient-to-r 
+                   from-transparent 
+                   via-[#d4af37]/70 
+                   to-transparent">
+      </span>
+
+      <!-- Text -->
+      <h3 class="text-xs sm:text-sm tracking-[0.4em] uppercase 
+                 text-[#d4af37] font-semibold">
+        Vintage Collection
+      </h3>
+
+      <!-- Right Line -->
+      <span class="flex-1 h-[1px] 
+                   bg-gradient-to-r 
+                   from-transparent 
+                   via-[#d4af37]/70 
+                   to-transparent">
+      </span>
+
+    </div>
+  </div>
+</div>
+<!-- VINTAGE COLLECTION BAR SECTION : END -->
+
+
+<!-- VINTAGE ANTIQUE LIGHTERS SECTION : START{AAK}-->
+<section class="bg-[#0b0b0b] min-[2100px]:px-[10%]">
+
+  <!-- Subtle Red Aura Background -->
+  <div class="absolute left-1/2 -translate-x-1/2 w-[1000px] h-[600px]
+              bg-[#8b0000]/20 blur-[220px] rounded-full pointer-events-none">
+  </div>
+
+  <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-[#d4af37]/25">
+
+    <!-- CARD 1 -->
+    <a href="https://www.smokeking.in/products/Bless-Rro_Gol/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Bless Rro Gold Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <div class="relative z-20 w-full h-full flex items-end justify-center pb-[3%]">
+        <img src="https://smokeking.in/gallery/IMG/26.png"
+             class="object-contain max-w-[98%] max-h-[96%]
+                    transition duration-700 ease-out group-hover:scale-[1.05]" />
+      </div>
+    </a>
+
+    <!-- CARD 2 -->
+    <a href="https://www.smokeking.in/products/Antique_Style_Lighter/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Antique Gold Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <div class="relative z-20 w-full h-full flex items-end justify-center pb-[3%]">
+        <img src="https://smokeking.in/gallery/IMG/1.png"
+             class="object-contain max-w-[89%] max-h-[96%]
+                    transition duration-700 ease-out group-hover:scale-[1.05]" />
+      </div>
+    </a>
+
+    <!-- CARD 3 -->
+    <a href="https://www.smokeking.in/products/HexaForge_Gol/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          HexaForge Gold Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <div class="relative z-20 w-full h-full flex items-end justify-center pb-[3%]">
+        <img src="https://smokeking.in/gallery/IMG/32.png"
+             class="object-contain max-w-[98%] max-h-[96%]
+                    transition duration-700 ease-out group-hover:scale-[1.05]" />
+      </div>
+    </a>
+
+    <!-- CARD 4 -->
+    <a href="https://www.smokeking.in/products/Royal-Heritage_Gol/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Heritage Gold Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <img src="https://smokeking.in/gallery/IMG/31.png"
+           class="w-full h-full scale-[1.2] object-contain
+                  transition duration-700 group-hover:scale-[1.25]" />
+    </a>
+
+    <!-- CARD 5 -->
+    <a href="https://www.smokeking.in/products/Vintage_Antique_Lighter/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Antique Brass
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <img src="https://smokeking.in/gallery/IMG/15.png"
+           class="w-full h-full object-contain transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+    <!-- CARD 6 -->
+    <a href="https://www.smokeking.in/products/Vintage_Antique_Gol/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Antique Gold
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <img src="https://smokeking.in/gallery/IMG/8.png"
+           class="w-full h-full object-contain transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+    <!-- CARD 7 -->
+    <a href="https://www.smokeking.in/products/Vntg_Antq_Brsh-Gol-1/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Brushed Gold
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <img src="https://smokeking.in/gallery/IMG/14.png"
+           class="w-full h-full object-contain transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+    <!-- CARD 8 -->
+    <a href="https://www.smokeking.in/products/Vntg_Antq_Brsh-Gol-2/"
+      class="relative aspect-square bg-[linear-gradient(145deg,#120000,#1a0000,#0b0b0b)]
+             overflow-hidden group flex items-center justify-center">
+
+      <div class="absolute top-4 left-4 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Brushed Bronze
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+
+      <img src="https://smokeking.in/gallery/IMG/10.png"
+           class="w-full h-full object-contain transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+  </div>
+</section>
+<!-- VINTAGE ANTIQUE LIGHTERS SECTION : END{AAK}-->
+ 
+<!-- FOOTER SECTION: START{AAK}--> <footer class="relative text-[#e8e0d6] overflow-hidden border-t-[1px] border-[#d4af37]"> <!-- Anime Background Base --> <div class="absolute inset-0 bg-[linear-gradient(160deg,#0b0b0b,#1a0000,#0b0b0b)]"> </div> <!-- Gold Anime Glow --> <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-[#d4af37]/20 blur-[160px] rounded-full animate-pulse"> </div> <!-- Red Aura Glow --> <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-[#8b0000]/30 blur-[160px] rounded-full"> </div> <!-- Subtle Anime Particle Overlay --> <div class="absolute inset-0 opacity-[0.08] pointer-events-none bg-[radial-gradient(circle,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[length:4px_4px]"> </div> <!-- Content --> <div class="relative max-w-7xl mx-auto px-5 sm:px-8 py-16"> <div class="grid gap-12 md:grid-cols-3"> <!-- LEFT --> <div class="space-y-6"> <h3 class="text-xl tracking-widest font-semibold text-[#d4af37] drop-shadow-lg"> SmokeKing.in </h3> <p class="text-sm text-[#b8a892] leading-relaxed max-w-sm"> Your premier destination for luxury cigar accessories. We curate the finest collection of premium cigar cutters and elegant lighters for the discerning connoisseur. </p> <div class="flex items-center gap-6 text-sm text-[#a8967c]"> <span class="flex items-center gap-2"> <span class="w-1.5 h-1.5 bg-[#d4af37] rounded-full"></span> Secure Payments </span> <span class="flex items-center gap-2"> <span class="w-1.5 h-1.5 bg-[#d4af37] rounded-full"></span> Fast Shipping </span> </div> </div> <!-- CENTER --> <div> <h4 class="text-xs tracking-widest uppercase text-[#d4af37] mb-6"> Quick Links </h4> <ul class="space-y-4 text-sm text-[#b8a892]"> <li><a href="https://www.smokeking.in/products/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">All Products</a></li> <li><a href="https://www.smokeking.in/products/?category=premium_cutters" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Cigar Cutters</a></li> <li><a href="https://www.smokeking.in/products/?category=premium_lighters" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Lighters</a></li> <li><a href="https://www.smokeking.in/cart/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Shopping Cart</a></li> </ul> </div> <!-- RIGHT --> <div> <h4 class="text-xs tracking-widest uppercase text-[#d4af37] mb-6"> Support </h4> <ul class="space-y-4 text-sm text-[#b8a892]"> <li><a href="https://www.smokeking.in/contact/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Contact Us</a></li> <li><a href="https://www.smokeking.in/policy/shipping/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Shipping Info</a></li> <li><a href="https://www.smokeking.in/policy/return/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Returns</a></li> <li><a href="https://www.smokeking.in/policy/payment/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Payment</a></li> </ul> </div> </div> <!-- DIVIDER --> <div class="border-t border-[#2a1a0f] my-10"></div> <!-- BOTTOM --> <div class="flex flex-col md:flex-row justify-between gap-6 text-sm text-[#8f7c65]"> <div> © <span class="text-[#d4af37] font-medium">SmokeKing.in</span> All rights reserved.<br> GSTIN: 07CSZPK2013G1ZM </div> <div class="flex gap-6"> <a href="https://www.smokeking.in/policy/privacy/" class="hover:text-[#d4af37] transition duration-300">Privacy Policy</a> <a href="https://www.smokeking.in/policy/terms/" class="hover:text-[#d4af37] transition duration-300">Terms & Conditions</a> </div> </div> </div> </footer> <!-- FOOTER SECTION: END{AAK}-->
+
+</body> 
+
+<script>
+  const track = document.getElementById("marqueeTrack");
+
+  let speed = window.innerWidth < 768 ? 0.4 : 0.8;
+  let position = 0;
+  let paused = false;
+
+  // Duplicate slides once for seamless loop
+  track.innerHTML += track.innerHTML;
+
+  // Pause on hover
+  track.addEventListener("mouseenter", () => paused = true);
+  track.addEventListener("mouseleave", () => paused = false);
+  track.addEventListener("touchstart", () => paused = true);
+  track.addEventListener("touchend", () => paused = false);
+
+  function animate() {
+    if (!paused) {
+      position -= speed;
+
+      // Reset after half width (because duplicated)
+      if (Math.abs(position) >= track.scrollWidth / 2) {
+        position = 0;
+      }
+
+      track.style.transform = `translateX(${position}px)`;
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
+<script>
+  /* ================= MOBILE MENU ================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.getElementById("mobileMenuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  if (!btn || !menu) return;
+
+  btn.addEventListener("click", function () {
+
+    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== "0px";
+
+    if (!isOpen) {
+      menu.style.maxHeight = menu.scrollHeight + "px";
+      document.body.style.overflow = "hidden";
+    } else {
+      menu.style.maxHeight = "0px";
+      document.body.style.overflow = "";
+    }
+
+    btn.classList.toggle("active");
+
+  });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.getElementById("mobileCategoryBtn");
+  const dropdown = document.getElementById("mobileCategoryDropdown");
+  const icon = document.getElementById("mobileCategoryIcon");
+
+  if (!btn || !dropdown) return;
+
+  let isOpen = false;
+
+  btn.addEventListener("click", function () {
+
+    if (!isOpen) {
+
+      dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+      icon.style.transform = "rotate(180deg)";
+      isOpen = true;
+
+    } else {
+
+      dropdown.style.maxHeight = "0px";
+      icon.style.transform = "rotate(0deg)";
+      isOpen = false;
+
+    }
+
+  });
+
+});
+</script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
+
