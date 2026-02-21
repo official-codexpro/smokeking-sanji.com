@@ -22,22 +22,12 @@ body {
   margin: 0;
   min-height: 100vh;
   color: #e8e0d6;
-  position: relative;
 
-  background-image: url("IMG/bg1.png");
+  background-image: url("IMG/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-/* Dark Overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* adjust 0.4 - 0.7 */
-  z-index: -1;
 }
 
 
@@ -575,160 +565,183 @@ body::before {
 <!-- ================= NEVBAR END================= -->
 
 
-<!-- PREMIUM HERO BANNER : START -->
-<section class="pt-8 relative h-[90vh] overflow-hidden 
-                border-b-2 border-[#d4af37] text-[#f5eaea]">
+<!-- HERO SECTION : START -->
+<section class="relative overflow-hidden text-[#f5eaea] border-b-[4px] border-[#d4af37] h-[73vh] lg:h-[82%]">
 
-  <!-- Background Image -->
+  <!-- Image Background -->
   <div class="absolute inset-0">
-    <img src="IMG/herobg1.png"
-         class="w-full h-full object-cover scale-[1.05]" />
+    <img src="IMG/herobg1.png" alt="Anime Background"
+         class="w-full h-full object-cover" />
   </div>
 
-  <!-- Deep Luxury Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-b 
-              from-black/85 via-black/75 to-black/95"></div>
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/65"></div>
 
-  <!-- Subtle Red Cinematic Glow -->
-  <div class="absolute top-[-250px] left-1/2 -translate-x-1/2
-              w-[1000px] h-[1000px]
-              bg-[#e10600]/15 blur-[280px] rounded-full">
+  <!-- Red Cinematic Blend -->
+  <div class="absolute inset-0 
+              bg-gradient-to-br from-[#7a0000]/60 via-transparent to-black/80">
   </div>
 
-  <!-- Premium Gold Accent Glow -->
-  <div class="absolute bottom-[-300px] right-[-200px]
-              w-[900px] h-[900px]
-              bg-[#d4af37]/10 blur-[260px] rounded-full">
+  <!-- Soft Glow Center -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+              w-[700px] h-[700px]
+              bg-[#e10600]/25 blur-[200px] rounded-full">
   </div>
 
-  <!-- Content Wrapper -->
-  <div class="relative max-w-7xl mx-auto px-6 h-full">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-14 lg:pt-16">
 
-    <div class="grid lg:grid-cols-2 h-full items-center">
+    <div class="grid lg:grid-cols-2 gap-6 sm:gap-10 min-h-[70vh]">
 
       <!-- LEFT CONTENT -->
-      <div class="text-center lg:text-left">
+<div class="flex items-start pt-10 sm:pt-16 lg:pt-36">
+        <div class="text-center lg:text-left">
 
-        <p class="text-xs tracking-[0.5em] uppercase text-[#ff4d4d] mb-6">
-          Archive Collection
-        </p>
+          <p class="text-[10px] sm:text-xs tracking-[0.4em] uppercase text-[#ff4d4d] mb-3">
+            Archive Collection
+          </p>
 
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl 
-                   font-extralight leading-[1.05] mb-8
-                   bg-gradient-to-r 
-                   from-white via-[#ff4d4d] to-white 
-                   bg-clip-text text-transparent">
-          Smokeking <br class="hidden lg:block">
-          Vintage Brass
-        </h1>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-4
+                     bg-gradient-to-r from-[#ffffff] via-[#ff4d4d] to-[#ffffff] 
+                     bg-clip-text text-transparent">
+            Smokeking Vintage Brass
+          </h1>
 
-        <p class="text-[#c8b5b5] text-base sm:text-lg lg:text-xl 
-                  max-w-xl leading-relaxed mb-10 mx-auto lg:mx-0">
-          Forged in aged brass. Marked by time.
-          Built with mechanical soul.
-          A piece to outlive generations.
-        </p>
+          <p class="text-[#d6b3b3] max-w-xl text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+            Forged in aged brass.
+            Marked by time. Built with mechanical soul.
+            A piece to outlive generations.
+          </p>
 
-        <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
 
-          <button
-            onclick="window.location.href='https://www.smokeking.in/'"
-            class="px-14 py-4 text-xs tracking-[0.35em] uppercase
-                   bg-[#e10600] text-white
-                   shadow-[0_0_70px_rgba(225,6,0,0.6)]
-                   hover:bg-[#c40000]
-                   transition duration-300">
-            VIEW COLLECTION
-          </button>
+            <button onclick="window.location.href='https://www.smokeking.in/'"
+              class="px-10 py-3 text-xs tracking-[0.35em] uppercase 
+                     bg-[#e10600] text-white 
+                     hover:bg-[#c40000]
+                     shadow-[0_0_50px_rgba(225,6,0,0.6)]
+                     transition duration-300">
+              VIEW Collection
+            </button>
 
-          <button
-            onclick="window.location.href='https://www.smokeking.in/coupons/'"
-            class="px-14 py-4 text-xs tracking-[0.35em] uppercase
-                   border border-[#ff4d4d]/70 text-[#ff4d4d]
-                   hover:bg-[#1a0000]
-                   transition duration-300">
-            GET COUPON
-          </button>
+            <button onclick="window.location.href='https://www.smokeking.in/coupons/'"
+              class="px-10 py-3 text-xs tracking-[0.35em] uppercase 
+                     border border-[#ff4d4d] text-[#ff4d4d] 
+                     hover:bg-[#1f0000] 
+                     transition duration-300">
+              GET COUPON
+            </button>
 
+          </div>
         </div>
-
       </div>
 
-      <!-- RIGHT IMAGE -->
-      <div class="relative flex justify-center lg:justify-end 
-                  items-end h-full mt-10 lg:mt-0">
+     <!-- RIGHT IMAGE -->
+      <div class="relative flex items-end justify-center lg:justify-end">
 
-        <!-- Depth Glow -->
-        <div class="absolute 
-                    w-[500px] h-[500px] 
-                    lg:w-[950px] lg:h-[950px]
-                    bg-[#e10600]/20 blur-[260px] rounded-full">
+        <!-- Glow -->
+        <div class="absolute w-[320px] h-[320px] sm:w-[480px] sm:h-[480px] lg:w-[700px] lg:h-[700px]
+                  bg-[#C0A27A]/18 blur-[170px] sm:blur-[210px] lg:blur-[240px] rounded-full">
         </div>
 
-        <!-- Character Image -->
-        <img src="IMG/character.png"
-             class="relative z-10
-                    w-[320px] sm:w-[420px] 
-                    md:w-[600px] 
-                    lg:w-[850px]
-                    drop-shadow-[0_90px_160px_rgba(0,0,0,0.95)]
-                    transition duration-700" />
+        <!-- Image -->
+        <img src="IMG/character.png" alt="Vintage Lighter" class="relative 
+                    w-[280px] sm:w-[380px] md:w-[520px] lg:w-[680px]
+                    drop-shadow-[0_40px_70px_rgba(0,0,0,0.85)]
+                    hover:scale-[1.015] transition duration-700" />
       </div>
 
     </div>
   </div>
-
 </section>
-<!-- PREMIUM HERO BANNER : END -->
+<!-- HERO SECTION : END -->
 
-<!-- PREMIUM FEATURE SECTION : START -->
-<section class="relative py-28">
+<!-- LARGE 4 CARD SECTION: START{AAK}-->
+<section class="bg-[radial-gradient(circle_at_top,#140000,transparent_70%)] bg-[#0b0b0b] mt-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-[1px] bg-[#d4af37]/30">
 
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- CARD 1 -->
+       <a href="https://www.smokeking.in/products/Submarine_style_lighter/"
+       class="group relative aspect-[16/9]
+              bg-[linear-gradient(155deg,#0a0a0a,#220000,#6b1a00,#220000,#0a0a0a)]
+              overflow-hidden flex items-center justify-center">
 
-    <!-- LEFT CONTENT -->
-    <div>
-      <p class="text-xs tracking-[0.4em] uppercase text-white/60 mb-4">
-        Crafted Legacy
-      </p>
+      <div class="absolute top-3 left-3 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Submarine Lighter
+        </h4>
+      </div>
 
-      <h2 class="text-4xl md:text-5xl font-light text-white mb-6 leading-tight">
-        Precision Engineering <br>
-        Meets Timeless Design
-      </h2>
-
-      <p class="text-white/70 text-lg leading-relaxed mb-8 max-w-xl">
-        Every detail is machined to perfection. 
-        From balanced ignition pressure to precision flame output, 
-        our lighters are built to deliver performance wrapped in luxury.
-      </p>
-
-      <a href="#"
-         class="inline-block px-10 py-4 rounded-full
-                bg-white/10 backdrop-blur-xl
-                border border-white/20
-                text-white tracking-[0.25em] text-xs uppercase
-                hover:bg-white/20 transition duration-500">
-        Explore Details
-      </a>
-    </div>
-
-    <!-- RIGHT IMAGE -->
-    <div class="relative">
-
-      <!-- Soft Glow -->
-      <div class="absolute inset-0 blur-3xl bg-white/10 rounded-full"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 z-10"></div>
 
       <img src="IMG/product/5.png"
-           class="relative z-10 w-full max-w-md mx-auto
-                  drop-shadow-[0_40px_80px_rgba(0,0,0,0.6)]
-                  transition duration-700 hover:scale-105" />
-    </div>
+           class="relative z-20 h-full object-contain p-3 
+                  transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+
+    <!-- CARD 2 -->
+      <a href="https://www.smokeking.in/products/Submarine_style_lighter/"
+       class="group relative aspect-[16/9]
+              bg-[linear-gradient(385deg,#0a0a0a,#220000,#6b1a00,#220000,#0a0a0a)]
+              overflow-hidden flex items-center justify-center">
+
+      <div class="absolute top-3 left-3 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Submarine Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 z-10"></div>
+
+      <img src="IMG/product/12.png"
+           class="relative z-20 h-full object-contain p-3 
+                  transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+
+    <!-- CARD 3 -->
+    <a href="https://www.smokeking.in/products/Wukong_Gold_Lighter/"
+       class="group relative aspect-[16/9]
+              bg-[linear-gradient(385deg,#0a0a0a,#220000,#6b1a00,#220000,#0a0a0a)]
+              overflow-hidden flex items-center justify-center">
+
+      <div class="absolute top-3 left-3 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Wukong Gold Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 z-10"></div>
+
+      <img src="IMG/product/10.png"
+           class="relative z-20 h-full object-contain p-3 
+                  transition duration-700 group-hover:scale-[1.05]" />
+    </a>
+
+
+    <!-- CARD 4 -->
+    <a href="https://www.smokeking.in/products/Submarine_style_lighter/"
+       class="group relative aspect-[16/9]
+              bg-[linear-gradient(155deg,#0a0a0a,#220000,#6b1a00,#220000,#0a0a0a)]
+              overflow-hidden flex items-center justify-center">
+
+      <div class="absolute top-3 left-3 z-20">
+        <h4 class="text-xs sm:text-sm font-semibold tracking-[0.22em] uppercase text-[#d4af37]">
+          Submarine Lighter
+        </h4>
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 z-10"></div>
+
+      <img src="IMG/product/11.png"
+           class="relative z-20 h-full object-contain p-3 
+                  transition duration-700 group-hover:scale-[1.05]" />
+    </a>
 
   </div>
-
 </section>
-<!-- PREMIUM FEATURE SECTION : END -->
+<!-- LARGE 4 CARD SECTION: END{AAK}-->
+
 
 <!-- BEST SELLER BAR SECTION : START -->
 <div class="bg-[#0b0b0b] mt-1 mb-1">
