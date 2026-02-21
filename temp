@@ -1,233 +1,3 @@
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smokeking Store – Vintage Lighters</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/feather-icons"></script>
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWixYJQ0U9E9Q4KkC4R9E+o5DkFz0xRykG5qBP3ZiZsa1+l9I7IuP89xDSHLyfXRIlnJrA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap"
-    rel="stylesheet">
-
-  <style>
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: #e8e0d6;
-  position: relative;
-
-  background-image: url("IMG2/bg1.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-/* Dark Overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55); /* adjust 0.4 - 0.7 */
-  z-index: -1;
-}
-
-
-    h1,
-    h2,
-    h3,
-    h4,
-    .brand-font {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    .animate-marquee {
-      animation: marquee 40s linear infinite;
-    }
-
-    #marqueeWrapper {
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-
-    #marqueeWrapper::-webkit-scrollbar {
-      display: none;
-    }
-
-    #marqueeTrack {
-      width: max-content;
-    }
-
-    /* ================= HAMBURGER ================= */
-
-    .hamburger {
-      width: 28px;
-      height: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .hamburger span {
-      width: 100%;
-      height: 2px;
-      background: #E6DED4;
-      transition: transform .4s ease, opacity .3s ease;
-      transform-origin: center;
-    }
-
-    .hamburger.active span:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /* HARD FIX: desktop pe hide enforce */
-    @media (min-width:1024px){
-      .hamburger{
-        display:none !important;
-      }
-      #mobileMenu{
-        display:none !important;
-      }
-    }
-
-/* SECTION BASE */
-.anime-vintage-bar {
-  position: relative;
-  background: #0b0b0b;
-  padding: 30px 0;
-  overflow: hidden;
-}
-
-/* CENTER CONTAINER */
-.anime-container {
-  position: relative;
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 0 20px;
-  z-index: 2;
-}
-
-/* ENERGY BURST */
-.anime-burst {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 900px;
-  height: 300px;
-  transform: translate(-50%, -50%);
-  background: rgba(225, 6, 0, 0.35);
-  filter: blur(180px);
-  border-radius: 50%;
-  animation: burstPulse 3s ease-in-out infinite alternate;
-  pointer-events: none;
-}
-
-/* SPEED LINES */
-.anime-lines {
-  position: absolute;
-  inset: 0;
-  opacity: 0.05;
-  background: repeating-linear-gradient(
-    90deg,
-    rgba(255,255,255,0.5) 0px,
-    rgba(255,255,255,0.5) 1px,
-    transparent 1px,
-    transparent 12px
-  );
-  pointer-events: none;
-}
-
-/* SIDE LINES */
-.anime-line {
-  flex: 1;
-  height: 3px;
-  background: linear-gradient(to right, transparent, #ff4d4d, transparent);
-  box-shadow: 0 0 20px rgba(225,6,0,0.8);
-}
-
-.anime-left {
-  animation: moveLeft 3s ease-in-out infinite;
-}
-
-.anime-right {
-  animation: moveRight 3s ease-in-out infinite;
-}
-
-/* TITLE */
-.anime-title {
-  font-size: 16px;
-  letter-spacing: 0.5em;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #ffffff;
-  animation: animeGlow 2.5s ease-in-out infinite alternate;
-}
-
-.anime-title span {
-  color: #ff4d4d;
-}
-
-/* ANIMATIONS */
-
-@keyframes moveLeft {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-15px); }
-}
-
-@keyframes moveRight {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(15px); }
-}
-
-@keyframes animeGlow {
-  from {
-    text-shadow:
-      0 0 5px rgba(255,0,0,0.6),
-      0 0 12px rgba(255,0,0,0.4);
-  }
-  to {
-    text-shadow:
-      0 0 18px rgba(255,0,0,1),
-      0 0 40px rgba(255,0,0,0.7);
-  }
-}
-
-@keyframes burstPulse {
-  from { opacity: 0.6; }
-  to { opacity: 1; }
-}
-
-</style>
-</head>
-<body>
 <!-- ================= PREMIUM TOPBAR SECTION : START{AAK} ================= -->
 <section class="bg-[#c70000] border-y border-[#ffffff] overflow-hidden">
   <div class="relative flex whitespace-nowrap">
@@ -247,14 +17,16 @@ body::before {
   </div>
 </section></b>
 <!-- ================= NAVBAR SECTION : START{AAK} ================= -->
+
+<!-- ================= NAVBAR SECTION : START{AAK} ================= -->
 <nav class="sticky top-0 z-50 bg-[#000000]/95 backdrop-blur-md border-b border-[#2A241E]" style=" font-family: 'Libre Baskerville', serif;">
 
   <!-- NAV ROW -->
   <div class="max-w-7xl mx-auto px-6 h-[64px] flex items-center justify-between">
 
-    <!-- LOGO -->
-    <a href="/" class="flex items-center gap-3">
-      <IMG2 src="https://www.smokeking.in/static/logo.gif" alt="SmokeKing.inlogo" class="h-12 w-auto"/>
+     <!-- LOGO -->
+    <a href="{% url 'home' %}" class="flex items-center gap-3">
+      <img src="{% static 'logo.gif' %}" alt="{{ SITE_NAME }}logo" class="h-12 w-auto"/>
       <span class="text-xl lg:text-2xl font-bold text-white brandbe-font">
          SmokeKing.in<span class="text-[#C0A27A]"></span>
       </span>
@@ -280,19 +52,19 @@ body::before {
               group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
               transition-all duration-300">
 
-    
+    {% for cat in categories %}
 
-    <a href="/products/?category=premium_lighters"
+    <a href="{% url 'product_list' %}?category={{ cat.slug }}"
        class="flex gap-4 px-5 py-4
-              rounded-t-xl
-              
+              {% if forloop.first %}rounded-t-xl{% endif %}
+              {% if forloop.last %}rounded-b-xl{% endif %}
               hover:bg-[#1C1A17] group transition duration-300">
 
       <!-- ICON -->
       <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
                    flex items-center justify-center overflow-hidden">
 
-        
+        {% if cat.slug == "premium_lighters" %}
                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="#C0A27A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 style="transition: transform 0.3s ease;" class="group-hover-icon">
@@ -301,121 +73,25 @@ body::before {
                 </path>
               </svg>
 
-        
-
-      </span>
-
-      <!-- TEXT (ALL SAME STYLE) -->
-      <div>
-        <p class="text-[#E6DED4] text-sm font-medium">
-          Lighters
-        </p>
-        <p class="text-xs text-[#9C9185]">
-          Premium collection
-        </p>
-      </div>
-
-    </a>
-
-    
-      <div class="mx-5 h-px bg-[#C0A27A]/20"></div>
-    
-
-    
-
-    <a href="/products/?category=premium_cutters"
-       class="flex gap-4 px-5 py-4
-              
-              
-              hover:bg-[#1C1A17] group transition duration-300">
-
-      <!-- ICON -->
-      <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
-                   flex items-center justify-center overflow-hidden">
-
-        
+        {% elif cat.slug == "premium_cutters" %}
                         <i data-feather="scissors" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
 
 
-        
-
-      </span>
-
-      <!-- TEXT (ALL SAME STYLE) -->
-      <div>
-        <p class="text-[#E6DED4] text-sm font-medium">
-          Cutter
-        </p>
-        <p class="text-xs text-[#9C9185]">
-          Premium collection
-        </p>
-      </div>
-
-    </a>
-
-    
-      <div class="mx-5 h-px bg-[#C0A27A]/20"></div>
-    
-
-    
-
-    <a href="/products/?category=cigarette-case"
-       class="flex gap-4 px-5 py-4
-              
-              
-              hover:bg-[#1C1A17] group transition duration-300">
-
-      <!-- ICON -->
-      <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
-                   flex items-center justify-center overflow-hidden">
-
-        
+        {% elif cat.slug == "cigarette-case" %}
                        <i data-feather="briefcase" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
 
 
-        
-
-      </span>
-
-      <!-- TEXT (ALL SAME STYLE) -->
-      <div>
-        <p class="text-[#E6DED4] text-sm font-medium">
-          Cigarette Case
-        </p>
-        <p class="text-xs text-[#9C9185]">
-          Premium collection
-        </p>
-      </div>
-
-    </a>
-
-    
-      <div class="mx-5 h-px bg-[#C0A27A]/20"></div>
-    
-
-    
-
-    <a href="/products/?category=premium_cigarette_ring"
-       class="flex gap-4 px-5 py-4
-              
-              rounded-b-xl
-              hover:bg-[#1C1A17] group transition duration-300">
-
-      <!-- ICON -->
-      <span class="w-9 h-9 rounded-lg bg-black border-2 border-white 
-                   flex items-center justify-center overflow-hidden">
-
-        
+        {% elif cat.slug == "premium_cigarette_ring" %}
                  <i data-feather="circle" class="w-5 h-5 text-[#C0A27A] group-hover:scale-110 transition"></i>
 
-        
+        {% endif %}
 
       </span>
 
       <!-- TEXT (ALL SAME STYLE) -->
       <div>
         <p class="text-[#E6DED4] text-sm font-medium">
-          Cigarette Ring
+          {{ cat.name }}
         </p>
         <p class="text-xs text-[#9C9185]">
           Premium collection
@@ -424,9 +100,11 @@ body::before {
 
     </a>
 
-    
+    {% if not forloop.last %}
+      <div class="mx-5 h-px bg-[#C0A27A]/20"></div>
+    {% endif %}
 
-    
+    {% endfor %}
 
   </div>
 </div>
@@ -437,7 +115,7 @@ body::before {
   feather.replace();
 </script>
 
-<a href="/products/" 
+<a href="{% url 'product_list' %}" 
    class="hover:text-[#C0A27A] transition">
   All Products
 </a>
@@ -464,7 +142,7 @@ body::before {
     Cart
   </a>
 
-  
+  {% if user.is_authenticated %}
 
   <!-- Logged In User -->
   <div class="relative">
@@ -475,11 +153,11 @@ body::before {
       <div class="w-8 h-8 bg-gradient-to-r from-[#8f6b2c] via-[#d4af37] to-[#8f6b2c]
                   rounded-full flex items-center justify-center">
         <span class="text-[#181310] font-bold text-sm">
-          A
+          {{ user.username|first|upper }}
         </span>
       </div>
 
-      <span class="font-medium">aakash</span>
+      <span class="font-medium">{{ user.username }}</span>
 
       <i id="userChevron"
          data-feather="chevron-down"
@@ -495,7 +173,7 @@ body::before {
 
       <div class="p-2">
 
-        <a href="/accounts/profile/"
+        <a href="{% url 'profile' %}"
            class="flex items-center gap-3 px-4 py-3
                   text-[#CFC6BB] hover:bg-[#1C1A17]
                   rounded-lg transition">
@@ -505,7 +183,7 @@ body::before {
           <span>Profile</span>
         </a>
 
-        <a href="/accounts/logout/"
+        <a href="{% url 'logout' %}"
            class="flex items-center gap-3 px-4 py-3
                   text-red-400 hover:bg-red-900/20
                   rounded-lg transition">
@@ -520,7 +198,25 @@ body::before {
 
   </div>
 
-  
+  {% else %}
+
+  <!-- Not Logged In -->
+  <a href="{% url 'login' %}"
+     class="flex items-center gap-2 hover:text-[#C0A27A] transition group">
+    <i data-feather="user"
+       class="w-5 h-5 group-hover:scale-110 transition"></i>
+    Login
+  </a>
+
+  <a href="{% url 'register' %}"
+     class="px-4 py-1.5 rounded-md
+            bg-gradient-to-r from-[#8f6b2c] via-[#d4af37] to-[#8f6b2c]
+            text-[#181310] font-semibold
+            hover:opacity-90 transition">
+    Register
+  </a>
+
+  {% endif %}
 
 </div>
 
@@ -624,7 +320,7 @@ body::before {
 
       <!-- ================= MAIN LINKS ================= -->
 
-      <a href="/products/" class="flex items-center gap-3 py-3 border-b border-[#2A241E]
+      <a href="{% url 'product_list' %}" class="flex items-center gap-3 py-3 border-b border-[#2A241E]
        hover:text-[#C0A27A] transition duration-300">
         <i data-feather="box" class="w-4 h-4"></i>
         All Products
@@ -653,26 +349,36 @@ body::before {
           View Cart
         </a>
 
-        
+        {% if user.is_authenticated %}
         <!-- Logged in user section -->
         <div class="flex items-center gap-3 p-3 bg-[#1C1A17] border border-[#2A241E] rounded-lg">
           <div class="w-10 h-10 bg-gradient-to-r from-[#8f6b2c] via-[#d4af37] to-[#8f6b2c] rounded-full flex items-center justify-center">
-            <span class="text-[#181310] font-bold">A</span>
+            <span class="text-[#181310] font-bold">{{ user.username|first|upper }}</span>
           </div>
           <div>
-            <div class="font-semibold text-[#E6DED4]">aakash</div>
-            <div class="text-xs text-[#9C9185]">aakash@quikprof.in</div>
+            <div class="font-semibold text-[#E6DED4]">{{ user.username }}</div>
+            <div class="text-xs text-[#9C9185]">{{ user.email }}</div>
           </div>
         </div>
-        <a href="/accounts/profile/" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-[#1C1A17] border border-[#2A241E] hover:text-[#C0A27A] transition duration-300">
+        <a href="{% url 'profile' %}" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-[#1C1A17] border border-[#2A241E] hover:text-[#C0A27A] transition duration-300">
           <i data-feather="user" class="w-4 h-4"></i>
           Profile
         </a>
-        <a href="/accounts/logout/" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-red-900/30 border border-red-800/50 text-red-400 hover:bg-red-900/50 transition duration-300">
+        <a href="{% url 'logout' %}" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-red-900/30 border border-red-800/50 text-red-400 hover:bg-red-900/50 transition duration-300">
           <i data-feather="log-out" class="w-4 h-4"></i>
           Logout
         </a>
-        
+        {% else %}
+        <!-- Not logged in -->
+        <a href="{% url 'login' %}" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-[#1C1A17] border border-[#2A241E] hover:text-[#C0A27A] transition duration-300">
+          <i data-feather="user" class="w-4 h-4"></i>
+          Login
+        </a>
+        <a href="{% url 'register' %}" class="flex items-center justify-center gap-2 py-3 rounded-lg bg-gradient-to-r from-[#8f6b2c] via-[#d4af37] to-[#8f6b2c] text-[#181310] font-semibold hover:opacity-90 transition duration-300">
+          <i data-feather="user-plus" class="w-4 h-4"></i>
+          Register
+        </a>
+        {% endif %}
 
       </div>
 
@@ -691,7 +397,7 @@ body::before {
 
   <!-- Background Image -->
   <div class="absolute inset-0">
-    <IMG2 src="IMG2/herobg1.png"
+    <img src="img/herobg1.png"
          class="w-full h-full object-cover scale-[1.05]" />
   </div>
 
@@ -775,7 +481,7 @@ body::before {
         </div>
 
         <!-- Character Image -->
-        <IMG2 src="IMG2/character.png"
+        <img src="/gallery/character.png"
              class="relative z-10
                     w-[320px] sm:w-[420px] 
                     md:w-[600px] 
@@ -890,7 +596,7 @@ body::before {
           <!-- Dark Bottom Gradient -->
           <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
 
-          <IMG2 src="IMG2/product/1.png"
+          <img src="/gallery/IMG2/product/1.png"
                class="relative z-20 h-full object-contain p-6 
                       transition duration-700 group-hover:scale-[1.06]" />
         </a>
@@ -911,7 +617,7 @@ body::before {
           <div class="absolute inset-0 bg-[#8b0000]/0 group-hover:bg-[#8b0000]/25 transition duration-500"></div>
           <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
 
-          <IMG2 src="IMG2/product/2.png"
+          <img src="/gallery/IMG2/product/2.png"
                class="relative z-20 h-full object-contain p-6 
                       transition duration-700 group-hover:scale-[1.06]" />
         </a>
@@ -932,7 +638,7 @@ body::before {
           <div class="absolute inset-0 bg-[#8b0000]/0 group-hover:bg-[#8b0000]/25 transition duration-500"></div>
           <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
 
-          <IMG2 src="IMG2/product/3.png"
+          <img src="/gallery/IMG2/product/3.png"
                class="relative z-20 h-full object-contain p-6 
                       transition duration-700 group-hover:scale-[1.06]" />
         </a>
@@ -952,7 +658,7 @@ UltraSlim Red Lighter            </h4>
           <div class="absolute inset-0 bg-[#8b0000]/0 group-hover:bg-[#8b0000]/25 transition duration-500"></div>
           <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70"></div>
 
-          <IMG2 src="IMG2/product/4.png"
+          <img src="/gallery/IMG2/product/4.png"
                class="relative z-20 h-full object-contain p-6 
                       transition duration-700 group-hover:scale-[1.06]" />
         </a>
@@ -1001,7 +707,7 @@ UltraSlim Red Lighter            </h4>
       </div>
 
       <!-- Character Image -->
-      <IMG2 src="IMG2/senijcollection.png"
+      <img src="img/senijcollection.png"
            alt="Anime Character"
            class="relative z-10
                   h-[220px] sm:h-[280px] md:h-[420px]
@@ -1048,7 +754,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative z-20 flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/6.png"
+    <img src="/gallery/IMG2/product/6.png"
          class="object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1110,7 +816,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/7.png"
+    <img src="/gallery/IMG2/product/7.png"
          class="relative z-20 object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1171,7 +877,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/8.png"
+    <img src="/gallery/IMG2/product/8.png"
          class="relative z-20 object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1233,7 +939,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/9.png"
+    <img src="/gallery/IMG2/product/9.png"
          class="relative z-20 object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1297,7 +1003,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/10.png"
+    <img src="/gallery/IMG2/product/10.png"
          class="relative z-20 object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1359,7 +1065,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/12.png"
+    <img src="/gallery/IMG2/product/12.png"
          class="relative z-20 object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1423,7 +1129,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/11.png"
+    <img src="/gallery/IMG2/product/11.png"
          class="relative z-20 object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1487,7 +1193,7 @@ UltraSlim Red Lighter            </h4>
   <div class="relative flex-[0.65] flex items-center justify-center
               px-4 sm:px-6 md:px-8">
 
-    <IMG2 src="IMG2/product/5.png"
+    <img src="/gallery/IMG2/product/5.png"
          class="relative z-20 object-contain
                 max-w-[85%] max-h-[75%] sm:max-h-[80%] md:max-h-[85%]
                 transition duration-700 ease-out
@@ -1528,120 +1234,3 @@ UltraSlim Red Lighter            </h4>
   </div>
 </section>
 <!-- VINTAGE ANTIQUE LIGHTERS SECTION : END{AAK}-->
-
-<!-- FOOTER SECTION: START{AAK}--> <footer class="relative text-[#e8e0d6] overflow-hidden border-t-[1px] border-[#d4af37]"> <!-- Anime Background Base --> <div class="absolute inset-0 bg-[linear-gradient(160deg,#0b0b0b,#1a0000,#0b0b0b)]"> </div> <!-- Gold Anime Glow --> <div class="absolute top-[-150px] left-[-150px] w-[500px] h-[500px] bg-[#d4af37]/20 blur-[160px] rounded-full animate-pulse"> </div> <!-- Red Aura Glow --> <div class="absolute bottom-[-150px] right-[-150px] w-[500px] h-[500px] bg-[#8b0000]/30 blur-[160px] rounded-full"> </div> <!-- Subtle Anime Particle Overlay --> <div class="absolute inset-0 opacity-[0.08] pointer-events-none bg-[radial-gradient(circle,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[length:4px_4px]"> </div> <!-- Content --> <div class="relative max-w-7xl mx-auto px-5 sm:px-8 py-16"> <div class="grid gap-12 md:grid-cols-3"> <!-- LEFT --> <div class="space-y-6"> <h3 class="text-xl tracking-widest font-semibold text-[#d4af37] drop-shadow-lg"> SmokeKing.in </h3> <p class="text-sm text-[#b8a892] leading-relaxed max-w-sm"> Your premier destination for luxury cigar accessories. We curate the finest collection of premium cigar cutters and elegant lighters for the discerning connoisseur. </p> <div class="flex items-center gap-6 text-sm text-[#a8967c]"> <span class="flex items-center gap-2"> <span class="w-1.5 h-1.5 bg-[#d4af37] rounded-full"></span> Secure Payments </span> <span class="flex items-center gap-2"> <span class="w-1.5 h-1.5 bg-[#d4af37] rounded-full"></span> Fast Shipping </span> </div> </div> <!-- CENTER --> <div> <h4 class="text-xs tracking-widest uppercase text-[#d4af37] mb-6"> Quick Links </h4> <ul class="space-y-4 text-sm text-[#b8a892]"> <li><a href="https://www.smokeking.in/products/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">All Products</a></li> <li><a href="https://www.smokeking.in/products/?category=premium_cutters" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Cigar Cutters</a></li> <li><a href="https://www.smokeking.in/products/?category=premium_lighters" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Lighters</a></li> <li><a href="https://www.smokeking.in/cart/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Shopping Cart</a></li> </ul> </div> <!-- RIGHT --> <div> <h4 class="text-xs tracking-widest uppercase text-[#d4af37] mb-6"> Support </h4> <ul class="space-y-4 text-sm text-[#b8a892]"> <li><a href="https://www.smokeking.in/contact/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Contact Us</a></li> <li><a href="https://www.smokeking.in/policy/shipping/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Shipping Info</a></li> <li><a href="https://www.smokeking.in/policy/return/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Returns</a></li> <li><a href="https://www.smokeking.in/policy/payment/" class="hover:text-[#d4af37] transition duration-300 hover:tracking-wider">Payment</a></li> </ul> </div> </div> <!-- DIVIDER --> <div class="border-t border-[#2a1a0f] my-10"></div> <!-- BOTTOM --> <div class="flex flex-col md:flex-row justify-between gap-6 text-sm text-[#8f7c65]"> <div> © <span class="text-[#d4af37] font-medium">SmokeKing.in</span> All rights reserved.<br> GSTIN: 07CSZPK2013G1ZM </div> <div class="flex gap-6"> <a href="https://www.smokeking.in/policy/privacy/" class="hover:text-[#d4af37] transition duration-300">Privacy Policy</a> <a href="https://www.smokeking.in/policy/terms/" class="hover:text-[#d4af37] transition duration-300">Terms & Conditions</a> </div> </div> </div> </footer> <!-- FOOTER SECTION: END{AAK}-->
-
-</body> 
-
-<script>
-  const track = document.getElementById("marqueeTrack");
-
-  let speed = window.innerWidth < 768 ? 0.4 : 0.8;
-  let position = 0;
-  let paused = false;
-
-  // Duplicate slides once for seamless loop
-  track.innerHTML += track.innerHTML;
-
-  // Pause on hover
-  track.addEventListener("mouseenter", () => paused = true);
-  track.addEventListener("mouseleave", () => paused = false);
-  track.addEventListener("touchstart", () => paused = true);
-  track.addEventListener("touchend", () => paused = false);
-
-  function animate() {
-    if (!paused) {
-      position -= speed;
-
-      // Reset after half width (because duplicated)
-      if (Math.abs(position) >= track.scrollWidth / 2) {
-        position = 0;
-      }
-
-      track.style.transform = `translateX(${position}px)`;
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-</script>
-
-<script>
-  /* ================= MOBILE MENU ================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const btn = document.getElementById("mobileMenuBtn");
-  const menu = document.getElementById("mobileMenu");
-
-  if (!btn || !menu) return;
-
-  btn.addEventListener("click", function () {
-
-    const isOpen = menu.style.maxHeight && menu.style.maxHeight !== "0px";
-
-    if (!isOpen) {
-      menu.style.maxHeight = menu.scrollHeight + "px";
-      document.body.style.overflow = "hidden";
-    } else {
-      menu.style.maxHeight = "0px";
-      document.body.style.overflow = "";
-    }
-
-    btn.classList.toggle("active");
-
-  });
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  const btn = document.getElementById("mobileCategoryBtn");
-  const dropdown = document.getElementById("mobileCategoryDropdown");
-  const icon = document.getElementById("mobileCategoryIcon");
-
-  if (!btn || !dropdown) return;
-
-  let isOpen = false;
-
-  btn.addEventListener("click", function () {
-
-    if (!isOpen) {
-
-      dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-      icon.style.transform = "rotate(180deg)";
-      isOpen = true;
-
-    } else {
-
-      dropdown.style.maxHeight = "0px";
-      icon.style.transform = "rotate(0deg)";
-      isOpen = false;
-
-    }
-
-  });
-
-});
-</script>
-<script src="https://unpkg.com/feather-icons"></script>
-<script>
-document.getElementById("scrollBtn").addEventListener("click", function(e) {
-    e.preventDefault();
-
-    const target = document.querySelector("#collection");
-    const offset = 80; // navbar height adjust if needed
-
-    const topPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-    window.scrollTo({
-        top: topPosition,
-        behavior: "smooth"
-    });
-});
-</script>
-<script>
-  feather.replace();
-</script>
-
