@@ -741,8 +741,7 @@ body::before {
 
         <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
 
-          <button
-            onclick="window.location.href='https://www.smokeking.in/products/'"
+          <button id="scrollBtn"
             class="px-14 py-4 text-xs tracking-[0.35em] uppercase
                    bg-[#e10600] text-white
                    shadow-[0_0_70px_rgba(225,6,0,0.6)]
@@ -843,7 +842,7 @@ body::before {
 </section>
 
 <!-- RIGHT TO LEFT SLIDER SECTION : START{AAK}-->
-<section class="relative mt-1 overflow-hidden
+<section id="collection" class="relative mt-1 overflow-hidden
                 bg-transparent border-b-4 border-[#d4af37]">
 
   <!-- Warm Fire Glow Center -->
@@ -1627,6 +1626,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script src="https://unpkg.com/feather-icons"></script>
+<script>
+document.getElementById("scrollBtn").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const target = document.querySelector("#collection");
+    const offset = 80; // navbar height adjust if needed
+
+    const topPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({
+        top: topPosition,
+        behavior: "smooth"
+    });
+});
+</script>
 <script>
   feather.replace();
 </script>
